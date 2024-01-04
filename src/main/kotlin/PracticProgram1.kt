@@ -1,18 +1,11 @@
 
 
 import java.util.Scanner
-class CarLambo(val name:String,val Price:Int){
-    val madel:Int=23;
-    val logo:String="L"
-    val color:String="Red"
-}
-class CarTata(name: String,price:Int,color: String){
-    val name1="tata"
-}
+
 fun main(){
-    val car1=CarLambo("Lombogini",23000000)
-    println(car1.Price)
-    val car2=CarTata("Tata",2990000,"bule")
+  repeat(3){
+      println("or bhai")
+  }
 
 
 }
