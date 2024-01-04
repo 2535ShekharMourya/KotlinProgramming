@@ -27,7 +27,7 @@ fun main() {
     println(set.contains(23.4))
     println(set.size) // explore methods
 
-    var set1 = mutableListOf<Double>(122.3, 34.5, 13.5, 34.5)
+    var set1 = mutableSetOf<Double>(122.3, 34.5, 13.5, 34.5)
     for (e in set1) {
         println(e)
     }

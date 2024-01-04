@@ -29,6 +29,7 @@ class CSStudent(){
 //class matlab user define data type matlab ham khud decide karte hai hamara data kaisa hai nature me
 //Main function, Entry Point of Program
 fun main(args: Array<String>) {
+
     val carObj1 = Car(1200000, "tata", "Red")
     val carObj2 = Car(13000000, "lomborgini", "yelloe")
     val i: Int = 10;
