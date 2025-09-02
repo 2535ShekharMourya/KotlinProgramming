@@ -34,12 +34,12 @@ fun main() {
     set1.add(23.53)
 
 
-    var map = hashMapOf<String, Int>("shekhar" to 20, "azad" to 23)
-    var a = map.get("shekhar")
-    println(a)
-    for (e in map) {
-        println(e)
-    }
+//    var map = hashMapOf<String, Int>("shekhar" to 20, "azad" to 23)
+//    var a = map.get("shekhar")
+//    println(a)
+//    for (e in map) {
+//        println(e)
+//    }
 
 
 }

@@ -1,0 +1,5 @@
+package CollectionsInKotlin
+
+fun main(){
+
+}
