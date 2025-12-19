@@ -1,2 +1,0 @@
-package problemSolving.arrayStringTwoPointer
-
