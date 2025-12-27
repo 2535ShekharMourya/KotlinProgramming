@@ -1,8 +1,6 @@
 package coroutines
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.runBlocking
+
 val list = mutableListOf<Int>()
 val lock = Object()
 fun main() {
