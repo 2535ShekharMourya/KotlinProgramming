@@ -2,9 +2,9 @@ package problemSolving.arrayString.slidingwindow;
 
 public class MainSlidingWindowProblems {
     public static void main(String[] args) {
-        int[] arr = new int[]{2,5,1,2,7,10};
+        int[] arr = new int[]{2,5,1,10,10};
        // constantWindow(arr,4);
-        longestSubArrWithSum(arr,14);
+        longestSubArrWithSumBatter(arr,14);
 
     }
     public static void constantWindow(int[]arr,int k){
@@ -28,7 +28,7 @@ public class MainSlidingWindowProblems {
         System.out.println(maxSum);
     }
 
-    public static void longestSubArrWithSum(int []arr, int k){
+    public static void longestSubArrWithSumBrute(int []arr, int k){
         // {2,5,1,7,10}: op: 3 : longest suArray with sum<=k
         // Brute solution
         int maxLen=Integer.MIN_VALUE;
@@ -46,4 +46,21 @@ public class MainSlidingWindowProblems {
         }
         System.out.println(maxLen);
     }
+    public static void longestSubArrWithSumBatter(int []arr, int k){
+        int left=0,right=0,sum=0,maxLen=0;
+        while (right<arr.length){
+            sum = sum + arr[right];
+            while (sum>k){
+                sum = sum - arr[left++]; // do not use ++left here:b/c it increment first then access 
+               // left++;
+            }
+            if (sum<=k){
+                maxLen = Math.max(maxLen,right - left + 1);
+                right++;
+            }
+        }
+        System.out.println(maxLen);
+
+    }
+
 }
