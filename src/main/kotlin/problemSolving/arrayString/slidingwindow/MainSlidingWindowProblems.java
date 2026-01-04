@@ -27,7 +27,6 @@ public class MainSlidingWindowProblems {
 
         System.out.println(maxSum);
     }
-
     public static void longestSubArrWithSumBrute(int []arr, int k){
         // {2,5,1,7,10}: op: 3 : longest suArray with sum<=k
         // Brute solution
@@ -61,6 +60,22 @@ public class MainSlidingWindowProblems {
         }
         System.out.println(maxLen);
 
+    }
+    public static void maxPointsFromCards(int []arr, int k){
+        // [6,2,3,4,7,2,1,7,1] ,k=4, op: 16
+        int leftSum=0,rightSum=0;
+        for(int i=0;i<k;i++){
+            leftSum = leftSum + arr[i];
+        }
+        int maxSum =leftSum;
+        int rightLength= arr.length-1;
+        for (int i=k-1;i>=0;i--){
+            leftSum = leftSum - arr[i];
+            rightSum = rightSum + arr[rightLength];
+            rightLength--;
+            maxSum = Math.max(maxSum,(leftSum + rightSum));
+        }
+        System.out.println(maxSum);
     }
 
 }

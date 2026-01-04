@@ -3,24 +3,27 @@ package problemSolving.dailypracticeExercises;
 public class MainExerciseJ {
 
     public static void main(String[] args) {
-        int []arr= new int[]{2,5,1,7,10};
-        solveTheProblem(arr,14);
+        int []arr= new int[]{6,2,3,4,7,2,1,7,1};
+        solveTheProblem(arr,4);
 
 
     }
 
     public static void solveTheProblem(int []arr, int k){
-        int maxLen =0 ;
-        for (int i=0;i<arr.length;i++){
-            int sum =0;
-            for (int j=i;j<arr.length;j++){
-                sum = sum + arr[j];
-                if (sum <=k){
-                    maxLen = Math.max(maxLen,j-i+1);
-                }
-
-            }
+        int leftSum=0,rightSum=0;
+        for(int i=0;i<k;i++){
+            leftSum = leftSum + arr[i];
         }
-        System.out.println(maxLen);
+        int maxSum =leftSum;
+
+        int rightLength= arr.length-1;
+        for (int i=k-1;i>=0;i--){
+            leftSum = leftSum - arr[i];
+            rightSum = rightSum + arr[rightLength];
+            rightLength--;
+            maxSum = Math.max(maxSum,(leftSum + rightSum));
+        }
+
+        System.out.println(maxSum);
     }
 }
