@@ -1,4 +1,4 @@
-package OOps.constructore;
+package oops.constructore;
 
 public class ConstructorInJava {
 }

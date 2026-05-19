@@ -1,4 +1,4 @@
-package OOps.constructore
+package oops.constructore
 
 data class User(val name:String,val age:Int){
     init {
