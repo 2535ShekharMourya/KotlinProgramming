@@ -1,4 +1,0 @@
-package masterDesignPatterns
-
-class SingletonPattern {
-}

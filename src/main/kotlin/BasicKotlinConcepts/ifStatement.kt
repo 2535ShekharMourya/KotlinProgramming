@@ -1,5 +1,0 @@
-package BasicKotlinConcepts
-
-fun main(){
-
-}
